@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""all"""
+""" list all documents in a collection in PyMongo"""
 import pymongo
 
 
