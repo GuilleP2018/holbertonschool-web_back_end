@@ -5,5 +5,6 @@ import pymongo
 
 def insert_school(mongo_collection, **kwargs):
     """insert a document in Python"""
-    new = mongo_collection.insert_one(kwargs)
-    return new.inserted_id
+    if mongo_collection is not None:
+        return mongo_collection.insert_one(kwargs).inserted_id
+    return None
