@@ -1,11 +1,14 @@
-export default class Building {
+class Building {
   constructor(sqft) {
-    if (this.constructor === Building){
-      throw new TypeError('Cannot instatiate from Building directly');
+    if (
+      this.constructor !== Building
+      && typeof this.evacuationWarningMessage !== 'function'
+    ) {
+      throw Error(
+        'Class extending Building must override evacuationWarningMessage',
+      );
     }
-    if (this.evacuationWarningMessage === undefined){
-      throw new Error('Class extending Building must override evacuationWarningMessage');
-    }
+
     this._sqft = sqft;
   }
 
@@ -13,3 +16,5 @@ export default class Building {
     return this._sqft;
   }
 }
+
+export default Building;
