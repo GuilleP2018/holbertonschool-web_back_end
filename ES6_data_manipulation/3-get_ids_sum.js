@@ -9,4 +9,3 @@ function getStudentsIdsSum(students) {
 }
 
 export default getStudentsIdsSum;
-
