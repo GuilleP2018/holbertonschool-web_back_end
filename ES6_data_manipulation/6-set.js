@@ -1,6 +1,6 @@
 function setFromArray(array) {
   const set = new Set(array);
-  return Set;
+  return set;
 }
 
 export default setFromArray;
